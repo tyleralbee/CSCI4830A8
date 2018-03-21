@@ -96,8 +96,31 @@ $(document).keypress(function(event) {
 		alert("You pressed the 'a' key!")	
 	} else if (event.key == "b") {
 		alert("You pressed the 'b' key!")
-	}
+	} 
 })
+document.onkeydown = checkKey;
+
+function checkKey(e) {
+
+    e = e || window.event;
+
+    if (e.keyCode == '38') {
+        // up arrow
+      selectPrevious();selectPrevious();selectPrevious();selectPrevious();
+    }
+    else if (e.keyCode == '40') {
+        selectNext();
+      selectNext();selectNext();selectNext();
+    }
+    else if (e.keyCode == '37') {
+       selectPrevious();
+    }
+    else if (e.keyCode == '39') {
+       selectNext();
+    }
+
+}
+
 
 
 /* calculator stuff below here */
