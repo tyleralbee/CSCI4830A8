@@ -118,6 +118,12 @@ function checkKey(e) {
     else if (e.keyCode == '39') {
        selectNext();
     }
+    else if (e.keyCode == '13') {
+      	whichButton = getSelectedItem();
+	if (whichButton != null) {
+		$(whichButton).click();
+	}
+    }
 
 }
 
